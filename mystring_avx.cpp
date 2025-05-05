@@ -364,6 +364,7 @@ size_t my_str_avx::find(const std::string& str, size_t idx) const {
             size_t candidate = i + offset;
 
             if (candidate + str_len <= size_m &&
+                // Використовуємо memcmp для швидкодії. Інший варіант писати свій аналог що буде повільнішим
                 std::memcmp(src + candidate, str.data(), str_len) == 0) {
                 return candidate;
             }
@@ -374,6 +375,7 @@ size_t my_str_avx::find(const std::string& str, size_t idx) const {
 
     for (; i <= size_m - str_len; ++i) {
         if (src[i] == target &&
+            // Використовуємо memcmp для швидкодії. Інший варіант писати свій аналог що буде повільнішим
             std::memcmp(src + i, str.data(), str_len) == 0) {
             return i;
         }
@@ -412,6 +414,7 @@ size_t my_str_avx::find(const char* cstr, size_t idx) const {
             size_t candidate = i + offset;
 
             if (candidate + str_len <= size_m &&
+                // Використовуємо memcmp для швидкодії. Інший варіант писати свій аналог що буде повільнішим
                 std::memcmp(src + candidate, cstr, str_len) == 0) {
                 return candidate;
             }
@@ -422,6 +425,7 @@ size_t my_str_avx::find(const char* cstr, size_t idx) const {
 
     for (; i <= size_m - str_len; ++i) {
         if (src[i] == target &&
+            // Використовуємо memcmp для швидкодії. Інший варіант писати свій аналог що буде повільнішим
             std::memcmp(src + i, cstr, str_len) == 0) {
             return i;
         }
