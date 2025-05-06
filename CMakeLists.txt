@@ -11,3 +11,6 @@ add_executable(str_tests mystring.cpp mystring.hpp own_tests.cpp)
 add_compile_options(-mavx -mavx2)
 add_executable(AVX2_str_tests mystring_avx.cpp mystring_avx.h own_tests_avx.cpp)
 #endif
+
+add_executable(sse_tests own_tests_simd_sse.cpp main_sse.cpp mystring_simd_sse.h)
+add_executable(sse_tests_time time_counnt_sse.cpp main_sse.cpp mystring_simd_sse.h mystring.cpp mystring.hpp)
