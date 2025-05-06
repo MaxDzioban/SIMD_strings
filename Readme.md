@@ -1,6 +1,6 @@
 # Робота із стрічками за допомогою SIMD (ARM NEON, AVX2, SSE4.1)
 --- 
-Команда: Дзьобан Максим, Биков Данило, Шевчук Іван
+Команда: [Bykov Danylo](https://github.com/DanyaBykov), [Ivan Shevchuk](https://github.com/DoktorTomato), [Maksym Dzoban](https://github.com/MaxDzioban)<br>
 
 ### Prerequisites
 
